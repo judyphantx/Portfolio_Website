@@ -57,7 +57,7 @@ A modern, responsive portfolio website built with React and Tailwind CSS, showca
 
 ```bash
 git clone https://github.com/judyphantx/Portfolio_Website.git
-cd Portfolio_Website/judy-website
+cd Portfolio_Website
 ```
 
 2. Install dependencies:
@@ -84,7 +84,7 @@ npm run dev
 ## 📁 Project Structure
 
 ```
-judy-website/
+Portfolio_Website/
 ├── src/
 │   ├── components/
 │   │   ├── sections/
@@ -102,7 +102,8 @@ judy-website/
 │   └── index.css
 ├── public/
 ├── package.json
-└── vite.config.js
+├── vite.config.js
+└── README.md
 ```
 
 ## 🎨 Key Features Breakdown
