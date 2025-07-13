@@ -195,7 +195,7 @@ export const Projects = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="mt-16">
+        <div id="Contact" className="mt-16">
           <div className="bg-gray-900/30 backdrop-blur-sm rounded-xl p-8 border border-gray-700">
             <h3 className="text-2xl font-bold mb-6 text-white text-center bg-gradient-to-r from-blue-500 to-purple-400 bg-clip-text text-transparent">
               Get In Touch

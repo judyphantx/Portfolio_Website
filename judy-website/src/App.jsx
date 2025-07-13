@@ -1,16 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { LoadingScreen } from "./components/LoadingScreen";
 import { Navbar } from "./components/Navbar";
 import { MobileMenu } from "./components/MobileMenu";
 import { Home } from "./components/sections/Home";
 import { About } from "./components/sections/About";
-import {Projects} from "./components/sections/Projects"
+import { Projects } from "./components/sections/Projects";
+import { Footer } from "./components/sections/Footer";
 import "./index.css";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Scroll to top when the app loads
+  useEffect(() => {
+    if (isLoaded) {
+      // Small delay to ensure the page is fully rendered
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        // Also clear any hash from the URL
+        if (window.location.hash) {
+          window.history.replaceState(null, null, window.location.pathname);
+        }
+      }, 100);
+    }
+  }, [isLoaded]);
 
   return (
     <>
@@ -25,6 +40,7 @@ function App() {
         <Home />
         <About />
         <Projects />
+        <Footer />
       </div>
     </>
   );
